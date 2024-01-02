@@ -3,6 +3,7 @@ import ChefOption from "./ChefOption/ChefOption";
 import ChefServiec from "./ChefServiec/ChefServiec";
 import ContactUs from "./ContactUs/ContactUs";
 import Curosel from "./Curosel/Curosel";
+import Featured from "./Featured/Featured";
 import PopularItem from "./PopularMenu/PopularItem";
 
 
@@ -16,6 +17,7 @@ const Home = () => {
                   <PopularItem></PopularItem>
                   <ContactUs></ContactUs>
                   <ChefOption></ChefOption>
+                  <Featured></Featured>
 
             </div>
       );
