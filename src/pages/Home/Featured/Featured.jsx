@@ -5,8 +5,8 @@ import './Featured.css';
 
 const Featured = () => {
       return (
-            <section className='feature-image bg-cover blur-0  '>
-                  <div className='text-white py-7 '>
+            <section className='feature-image bg-cover blur-0 bg-fixed my-24  '>
+                  <div className='text-white py-7  bg-gradient-to-r from-black to-transparent '>
                         <SectionTitle
                               subHeading={'Check it out'}
                               heading={'FROM OUR MENU'}
@@ -23,9 +23,7 @@ const Featured = () => {
                               </div>
                         </div>
                   </div>
-                  <div className='absolute bg-black'>
-                        
-                  </div>
+               
             </section>
       );
 };
