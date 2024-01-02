@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import 'react-awesome-button/dist/styles.css';
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import MenuItem from "../../Shared/MenuItem/MenuItem";
-
 
 const PopularItem = () => {
 
@@ -16,7 +17,7 @@ const PopularItem = () => {
             })
 
       return (
-            <section>
+            <section className="my-10">
                   <div>
                         <SectionTitle
                               subHeading={'Check it out'}
@@ -25,7 +26,7 @@ const PopularItem = () => {
 
                   </div>
 
-                  <div className="border grid md:grid-cols-2">
+                  <div className=" grid md:grid-cols-2">
                         {
                               menu.map(item=><MenuItem
                                     key={item._id}
@@ -33,6 +34,9 @@ const PopularItem = () => {
                                    ></MenuItem>)
                         }
 
+                  </div>
+                  <div className="flex justify-center items-center">
+                  <AwesomeButton type="primary">View Full Menu</AwesomeButton>
                   </div>
             </section>
       );

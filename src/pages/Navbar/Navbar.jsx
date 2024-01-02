@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
       const navlist = <>
       <AwesomeButton type="primary">Primary</AwesomeButton>
-            <li><a>Home</a></li>
+            <li><a><AwesomeButton type="primary">Home</AwesomeButton></a></li>
             <li><a>CONTACT US</a></li>
             <li><a>DASHBOARD</a></li>
             <li><a>Our Menu</a></li>
