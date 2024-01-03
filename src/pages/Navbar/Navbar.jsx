@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
       const navlist = <>
-      <AwesomeButton type="primary">Primary</AwesomeButton>
-            <li><a><AwesomeButton type="primary">Home</AwesomeButton></a></li>
-            <li><a>CONTACT US</a></li>
-            <li><a>DASHBOARD</a></li>
-            <li><a>Our Menu</a></li>
-            <li><a>Our Shop</a></li>
+     
+            <li><Link to= '/'><AwesomeButton type="primary">Home</AwesomeButton></Link></li>
+            <li><Link to= '/menu'><AwesomeButton type="primary">Menu</AwesomeButton></Link></li>
+            
            
 
       </>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import ChefOption from "./ChefOption/ChefOption";
 import ChefServiec from "./ChefServiec/ChefServiec";
@@ -11,6 +12,9 @@ import PopularItem from "./PopularMenu/PopularItem";
 const Home = () => {
       return (
             <div className="">
+                    <Helmet>
+                    <title>Bistro | Home</title>
+                  </Helmet>
                   <Banner></Banner>
                   <Curosel></Curosel>
                   <ChefServiec></ChefServiec>
