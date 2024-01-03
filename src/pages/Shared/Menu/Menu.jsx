@@ -1,43 +1,70 @@
 import { Helmet } from "react-helmet";
 import menuImg from '../../../assets/menu/banner3.jpg';
-import menuImg2 from '../../../assets/menu/dessert-bg.jpeg';
-import pizzaImg from '../../../assets/menu/pizza-bg.jpg';
+import desertImg from '../../../assets/menu/dessert-bg.jpeg';
+import pizzImg from '../../../assets/menu/pizza-bg.jpg';
 import saladImg from '../../../assets/menu/salad-bg.jpg';
 import soupImg from '../../../assets/menu/soup-bg.jpg';
-import PopularItem from "../../Home/PopularMenu/PopularItem";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import useMenu from "../../../hooks/useMenu";
 import Cover from "../Cover/Cover";
+import MenuCategory from "./MenuCategory/MenuCategory";
 
 const Menu = () => {
+      const [menu] = useMenu();
+      const offered = menu.filter(item => item.category === 'offered')
+      const dessert = menu.filter(item => item.category === 'dessert')
+      const pizza = menu.filter(item => item.category === 'pizza')
+      const salad = menu.filter(item => item.category === 'salad')
+      const soup = menu.filter(item => item.category === 'soup')
+
+
       return (
             <div>
                   <Helmet>
-                    <title>Bistro | Menu</title>
+                        <title>Bistro | Menu</title>
                   </Helmet>
                   <Cover
-                     img= {menuImg}
-                     title='Our Menu'
+                        img={menuImg}
+                        title='Our Menu'
                   ></Cover>
-                  <PopularItem></PopularItem>
+                  <SectionTitle
+                        subHeading="Don't miss"
+                        heading="TODAY'S OFFER"
+                  ></SectionTitle>
+                  <MenuCategory
+                        items={offered}
+                  ></MenuCategory>
+            
+                  <MenuCategory
+                        items={dessert}
+                        img={desertImg}
+                        title='Dessert'
+                  ></MenuCategory>
+                  
                   <Cover
-                     img= {menuImg2}
-                     title='Our Menu'
+                        img={saladImg}
+                        title='Salad'
                   ></Cover>
-                  <PopularItem></PopularItem>
+                  <MenuCategory
+                        items={salad}
+                  ></MenuCategory>
                   <Cover
-                     img= {pizzaImg}
-                     title='Our Menu'
+                        img={soupImg}
+                        title='Soup'
                   ></Cover>
-                  <PopularItem></PopularItem>
+
+                  <MenuCategory
+                        items={soup}
+                  ></MenuCategory>
+
                   <Cover
-                     img= {saladImg}
-                     title='Our Menu'
+                        img={pizzImg}
+                        title='Pizza'
                   ></Cover>
-                  <PopularItem></PopularItem>
-                  <Cover
-                     img= {soupImg }
-                     title='Our Menu'
-                  ></Cover>
-                  <PopularItem></PopularItem>
+                  <MenuCategory
+                        items={pizza}
+                  ></MenuCategory>
+                  
             </div>
       );
 };

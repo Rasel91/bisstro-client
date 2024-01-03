@@ -10,7 +10,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-    <div className='max-w-screen-lg mx-auto'>
+    <div className='max-w-screen-lg font-serif mx-auto'>
       <RouterProvider router={router} />
     </div>
     </HelmetProvider>
