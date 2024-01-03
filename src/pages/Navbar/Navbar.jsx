@@ -7,6 +7,7 @@ const Navbar = () => {
      
             <li><Link to= '/'><AwesomeButton type="primary">Home</AwesomeButton></Link></li>
             <li><Link to= '/menu'><AwesomeButton type="primary">Menu</AwesomeButton></Link></li>
+            <li><Link to= '/order'><AwesomeButton type="primary">OrderFood</AwesomeButton></Link></li>
             
            
 
