@@ -11,7 +11,7 @@ import PopularItem from "./PopularMenu/PopularItem";
 
 const Home = () => {
       return (
-            <div className="">
+            <div >
                     <Helmet>
                     <title>Bistro | Home</title>
                   </Helmet>
