@@ -2,6 +2,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import Main from "../Layouts/Main/Main";
+import SingUp from "../assets/SingUp/SingUp";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import OrderFood from "../pages/Order/OrderFood";
@@ -24,11 +25,16 @@ export const router = createBrowserRouter([
         path: '/order/:category',
         element: <OrderFood></OrderFood>
       },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/singup',
+        element: <SingUp></SingUp>
+      }
 
     ]
   },
-  {
-    path: '/login',
-    element: <Login></Login>
-  }
+  
 ]);
